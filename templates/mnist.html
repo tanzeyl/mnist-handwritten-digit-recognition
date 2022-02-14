@@ -18,11 +18,10 @@
     <link rel="stylesheet" type="text/css" href="/static/css/footer_file.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/mnist_home.css" />
-
-    <!-- <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
-    <!-- <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
-    <!-- <script language="JavaScript" type="text/javascript" src="/static/js/imagebox_mnist.js"></script> -->
     <script>
       function readURL(input) {
         if (input.files && input.files[0]) {
@@ -41,19 +40,17 @@
       type="text/javascript"
       src="/static/js/predictbtn_mnist.js"
     ></script>
+    <title>Image Prediction</title>
   </head>
-  <!-- <body> -->
-  <!-- <body style=" background-size: 100% 100%; background-repeat: no-repeat; background-image: url('/static/img/background.jpg');"> -->
-  <body style="background-color: rgb(127, 195, 255)">
+  <body style="background-color: rgb(0, 0, 0, 1); font-family: 'Oxygen', sans-serif;">
     {% include "header.html" %}
-
     <div id="loader">
       <p class="glow">MNIST</p>
     </div>
     <div id="loader">
-      <div class="row" style="position: relative">
+      <div class="row custom-row style="position: relative">
         <div class="column1">
-          <h2>Upload Image</h2>
+          <h2>Upload an image</h2>
           <form
             id="upload-file-model"
             method="post"
@@ -66,7 +63,7 @@
               onchange="readURL(this);"
               accept=".png, .jpg, .jpeg"
             />
-            <label for="imgInp">Browse Image...</label>
+            <label for="imgInp">Browse Image</label>
           </form>
 
           <button id="predbtn">Predict MNIST</button>

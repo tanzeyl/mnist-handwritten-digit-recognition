@@ -1,18 +1,22 @@
 .column1 {
   float: left;
   width: 30%;
-  height: 400px; /* Should be removed. Only for demonstration */
-  background-color: #fff;
+  height: 400px;
+  background-color: grey;
 }
 
 .column2 {
   float: left;
   width: 70%;
-  height: 400px; /* Should be removed. Only for demonstration */
-  background-color: #0f4da6;
+  height: 400px;
+  background-color: grey;
 }
 
-/* Clear floats after the columns */
+.custom-row {
+  border: 5px solid white;
+  border-radius: 10px;
+}
+
 .row:after {
   content: "";
   display: table;
@@ -25,7 +29,6 @@
   margin-bottom: 3%;
   background-color: #060073;
 }
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column1 {
     width: 100%;
@@ -46,7 +49,6 @@
 
 label {
   cursor: pointer;
-  /* Style as you please, it will become the visible UI component. */
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2%;
@@ -54,7 +56,7 @@ label {
   font-size: 100%;
   color: #fff;
   border-radius: 25px;
-  background-color: #0f4da6;
+  background-color: #020e1f;
 }
 
 #blah {
@@ -69,7 +71,6 @@ label {
 
 #predbtn {
   cursor: pointer;
-  /* Style as you please, it will become the visible UI component. */
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 2%;
